@@ -1,55 +1,86 @@
 @-moz-document domain("www.f5oclock.com") {
-@font-face {
-  font-family: 'Inconsolata';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Inconsolata Regular'), local('Inconsolata-Regular'), url(https://fonts.gstatic.com/s/inconsolata/v16/BjAYBlHtW3CJxDcjzrnZCI4P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+#root {
+  height: 100%;
 }
-
-body, .footer{
-font-family: 'Inconsolata', monospace;
-font-size: 16px;
-color: rgb(180, 180, 180);
-background-color: rgb(36, 36, 36);
+.trending {
+  background-color: #ffd8b2 !important;
 }
-
-a, i {
-    color: rgb(180, 180, 180);
+.hot {
+  background-color: #ffbf7f !important;
 }
-
-a:hover, i:hover {
-    color: rgb(140, 140, 140);
+.f5oclock {
+  background-color: #ffa64c !important;
 }
-
-td.visible-lg.ng-binding {
+dt, dd {
+  display: inline;
+  margin: 3px;
+  padding: 3px;
+}
+.article {
+  min-height: 300px;
+}
+.tldr-image {
+  background-size: 100% auto;
+  width: 100%;
+  height: 100%;
+}
+.table td, .table th {
+  padding: 0.5rem !important;
+  vertical-align: top !important;
+  border-top: 1px solid #dee2e6 !important;
+}
+/* dark mode */
+.dark tr.f5oclock {
+  color: #000;
+}
+.dark .tldr .f5oclock, .dark .tldr .hot, .dark .tldr .trending {
+  color: #000;
+}
+.dark .tldr {
   color: rgb(180, 180, 180);
 }
-
-.trending {
+.dark .article-card {
+  background-color: rgb(60, 60, 60);
+  color: rgb(180, 180, 180);
+}
+.dark .article-card .f5oclock {
+  color: #ffa64c;
+}
+.dark .article-card .hot {
+  color: #ffbf7f;
+}
+.dark .article-card .trending{
+  color: #ffd8b2;
+}
+.dark .trending {
   background-color: rgb(80, 80, 80) !important;
-  color: #ffd8b2 !important;
 }
-
-.trending a, .trending a:hover, .trending i, trending i:hover {
-  color: rgb(180, 180, 180) !important;
-}
-
-.hot {
+.dark .hot {
   background-color: rgb(120, 120, 120) !important;
-  color: #ffbf7f !important;
 }
-
-.hot a, .hot a:hover, .hot i, .hot i:hover {
-  color: rgb(220, 220, 220) !important;
+.dark .f5oclock {
+  background-color: rgb(180, 180, 180) !important;
 }
-
-.f5oclock {
-    background-color: rgb(180, 180, 180) !important;
-    color: #ffa64c !important;
+.dark .btn {
+  color: rgb(180, 180, 180);
+  background-color: transparent;
 }
-
-.f5oclock a, .f5oclock a:hover, .f5oclock i, .f5oclock i:hover {
-  color: black !important
+.dark .f5oclock .btn{
+  color: #000;
+}
+.dark tr, .dark tr a {
+  color: rgb(180, 180, 180);
+}
+.dark .f5oclock a {
+  color: #ffa64c;
+}
+.dark .hot a {
+  color: #ffbf7f;
+}
+.dark .trending a {
+  color: #ffd8b2;
+}
+.dark {
+  background-color: rgb(40, 40, 40);
 }
 }
